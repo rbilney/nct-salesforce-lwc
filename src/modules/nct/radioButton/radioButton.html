@@ -1,0 +1,14 @@
+<template>
+    <template for:each={options} for:item="option">
+        <label key={option.id} class="radio">
+            <span class="radio__input">
+                <input type="radio" name={option.name} key={option.id} checked={option.checked} value={option.value} />
+                <span class="radio__control"></span>
+            </span>
+            <span class="radio__label">{option.label}</span>
+        </label>
+    </template>
+    <template if:true={isError}>
+        <p class="error-text">{errorText}</p>
+    </template>
+</template>

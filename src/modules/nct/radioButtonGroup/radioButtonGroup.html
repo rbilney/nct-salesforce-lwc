@@ -1,0 +1,21 @@
+<template>
+    <template if:true={hasLabel}>
+        <p class={labelClasses}>{label}</p>
+    </template>
+    <div class="nct-radio-button-group">
+        <template for:each={options} for:item="option">
+            <div key={option.id} class="radio-button-wrapper">
+                <input type="radio" name={option.name} key={option.id} checked={option.checked} value={option.value} id={option.id} disabled={option.disabled} onchange={handleSelection} />
+                <label class="radio-button" key={option.id} for={option.id}>
+                    <div>
+                        <span class="option-text">{option.optionText}</span>
+                        <span class="option-description">{option.optionDesc}</span>
+                    </div>
+                </label>
+            </div>
+        </template>
+    </div>
+    <template if:true={isError}>
+        <p class="error-text">{errorText}</p>
+    </template>
+</template>

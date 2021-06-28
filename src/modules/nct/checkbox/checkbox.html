@@ -1,0 +1,14 @@
+<template>
+    <template for:each={options} for:item="option">
+        <label key={option.id} class="checkbox">
+            <span class="checkbox__input">
+                <input type="checkbox" name={option.name} key={option.id} value={option.value} checked={option.checked} />
+                <span class="checkbox__control"></span>
+            </span>
+            <span class="checkbox__label">{option.label}</span>
+        </label>
+    </template>
+    <template if:true={isError}>
+        <p class="error-text">{errorText}</p>
+    </template>
+</template>

@@ -1,0 +1,102 @@
+<template>   
+
+
+    <h2>Payment component</h2>
+    <nct-payment-component membership-type={twelveMonthMembershipOptions}></nct-payment-component>
+
+
+  
+    <h2>Buttons</h2>
+
+    <p>
+        <nct-button href="https://www.nct.org.uk" button-text="Button Link" type="link"></nct-button>
+        <nct-button href="https://www.nct.org.uk" button-text="Outline Button Link" type="link" variant="outline"></nct-button> 
+    </p>
+
+    <nct-button button-text="Button" type="button"></nct-button>
+    <nct-button button-text="Outline Button" type="button" variant="outline"></nct-button>
+
+    <nct-button button-text="Submit" type="submit"></nct-button>
+
+    <nct-button button-text="Reset" type="reset"></nct-button>
+
+    <nct-button button-text="Disabled Button" type="button" state="disabled"></nct-button>
+
+    <h2>Text inputs</h2>
+    <nct-text-input 
+        label="First name" 
+        name="name"
+        input-type="text" 
+        value=""
+        placeholder="This is a placeholder..."
+        is-required
+        ></nct-text-input>
+
+    <nct-text-input 
+        label="Last name" 
+        name="name"
+        input-type="text" 
+        value=""
+        ></nct-text-input>
+
+
+    <nct-text-input 
+        label="Email" 
+        name="email"
+        input-type="email" 
+        value="mary.tester@gmail.com"
+        is-required
+        show-help-text
+        help-text="Please use a personal email address" 
+        ></nct-text-input>
+
+    <nct-text-input 
+        label="Email" 
+        name="email"
+        input-type="email" 
+        value="mary.tester@gmail.com"
+        is-required
+        show-help-text
+        is-error
+        error-text="Email address is invalid"
+        help-text="Please use a personal email address" 
+        ></nct-text-input>
+
+
+    <nct-text-input 
+        label="Text area" 
+        name="other"
+        input-type="textarea" 
+        value=""
+        ></nct-text-input>
+
+    <div>
+    <nct-text-input 
+        label="Postcode" 
+        name="name"
+        input-type="text" 
+        value=""
+        ></nct-text-input>
+    <nct-button button-text="Find address" type="button"></nct-button>
+</div>
+
+
+    <nct-select name="dropdown" label="Please select" is-required></nct-select>
+  
+    <h2>Radio buttons</h2>
+
+    <nct-radio-button></nct-radio-button>
+    
+    <br />
+
+    <nct-radio-button is-error error-text="You must select an option"></nct-radio-button>
+
+    <br />
+
+    <h2>Checkboxes</h2>
+    <nct-checkbox></nct-checkbox>
+    <br />
+    <nct-checkbox is-error error-text="You must select an option"></nct-checkbox>
+
+    
+</template>

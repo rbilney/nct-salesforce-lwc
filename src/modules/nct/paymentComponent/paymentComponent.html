@@ -1,0 +1,36 @@
+<template>
+
+    <nct-radio-button-group 
+        is-required 
+        label="How would you like to pay for your course?" 
+        options={payOptions}
+        onradiobuttonselection={handleCourseSelection}
+        >
+    </nct-radio-button-group>
+    
+    <template if:true={showInstalmentOptions}>
+        <div class="slds-grid slds-gutters">
+            <div class="slds-col">
+                <nct-radioButton></nct-radioButton>
+            </div>
+            <div class="slds-col">
+                <p>The first monthly payment will be taken today. The next collection date will be <strong>3 August 2021</strong>.</p>
+                <p>Future payments will be taken on the 3rd of the month.</p>
+            </div>
+        </div>
+    </template>
+
+
+    <nct-radio-button-group 
+        is-required 
+        label="How would you like to pay for your NCT Membership?" 
+        options={membershipProductPrices}
+        onradiobuttonselection={handleMembershipSelection}
+        >
+    </nct-radio-button-group>
+
+    <template if:true={showDirectDebit}>
+        <h3>Direct Debit Component</h3>
+    </template>
+
+</template>

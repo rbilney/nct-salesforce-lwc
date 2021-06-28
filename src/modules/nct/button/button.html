@@ -1,0 +1,9 @@
+
+<template>
+    <template if:false={isLink}>
+        <button type={type} disabled={isDisabled} href={href} role="button" class={buttonClass}>{buttonText}</button>
+    </template>
+    <template if:true={isLink}>
+        <a type={type} disabled={isDisabled} href={href} role="button" class={buttonClass}>{buttonText}</a>
+    </template>
+</template>

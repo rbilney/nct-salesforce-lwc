@@ -1,0 +1,76 @@
+
+.nct-input {
+    display: block;
+    margin-bottom: 1rem;
+    width: auto;
+}
+
+.nct-input label {
+    font-family: var(--secondary-font);
+    font-weight: 500;
+    color: #181818;
+    display: block;
+    margin-bottom: 6px;
+}
+
+.nct-input.is-required label::after {
+    font-family: var(--secondary-font);
+    font-weight: 800;
+    color: var(--nct-orange);
+    content:'*';
+    font-size: 1.4rem;
+    line-height: 1;
+}
+
+.nct-input input {
+    background-color: #FAFAFA;
+    border-color: #C4C4C4;
+    padding: 0.5rem 1rem;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 1.5rem;
+    font-size: 1rem;
+    font-family: var(--secondary-font);
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    outline: none;
+    width: 100%;
+    color: #737373;
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+    box-sizing: border-box;         /* Opera/IE 8+ */
+}
+
+.nct-input .nct-input-help-text {
+    font-family: var(--secondary-font);
+    font-size: 0.8rem;
+    margin-top: 4px;
+    color: #383838;
+}
+
+.nct-input.is-error input {
+    border-color: var(--nct-red);
+}
+
+.nct-input .nct-input-error-text {
+    font-family: var(--secondary-font);
+    font-size: 0.8rem;
+    margin-top: 4px;
+    color: var(--nct-red);
+}
+
+.nct-input input::-webkit-input-placeholder { /* Edge */
+    font-style: italic;
+    font-weight: 300;
+}
+
+.nct-input input:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    font-style: italic;
+    font-weight: 300;
+}
+
+.nct-input input::placeholder {
+    font-style: italic;
+    font-weight: 300;
+}

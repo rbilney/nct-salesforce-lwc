@@ -1,0 +1,12 @@
+<template>
+    <div class={fieldClass}>
+        <label for={name}>{label}</label>
+        <input type={inputType} name={name} value={value} id={name} placeholder={placeholder} required={isRequired}></input>
+        <template if:true={isError}>
+            <div class="nct-input-error-text">{errorText}</div>
+        </template>
+        <template if:true={showHelpText}>
+            <div class="nct-input-help-text">{helpText}</div>
+        </template>
+    </div>
+</template>

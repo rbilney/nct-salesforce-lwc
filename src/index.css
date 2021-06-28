@@ -1,0 +1,32 @@
+:root {
+    --primary-font: 'Lato', serif;
+    --secondary-font: 'Raleway', sans-serif;
+
+    --nct-green: #3AA43B;
+    --nct-dark-green: #00876A;
+    --nct-blue: #25A1AC;
+    --nct-purple: #85477E;
+    --nct-orange: #F49F29;
+    --nct-red: #FC000F;
+
+    --breakpoint-xs: 0;
+    --breakpoint-sm: 576px;
+    --breakpoint-md: 768px;
+    --breakpoint-lg: 992px;
+    --breakpoint-xl: 1200px;
+    --breakpoint-xxl: 1480px;
+}
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+html {
+    font-size: 16px;
+    font-family: var(--primary-font);
+    font-weight: 400;
+}
+#main {
+    width: 100%;
+    margin: 0 auto;
+}
