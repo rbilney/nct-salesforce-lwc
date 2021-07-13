@@ -2,7 +2,7 @@ import { LightningElement, api, track } from 'lwc';
 
 export default class RadioButtonGroup extends LightningElement {
     @api label;
-    @api isRequired = false;
+    @api required = false;
     @api showHelpText = false;
     @api helpText;
     @api isError = false;
@@ -13,7 +13,7 @@ export default class RadioButtonGroup extends LightningElement {
     @api userSelection;
 
     get labelClasses () {
-        return this.isRequired ? 'nct-label is-required' : 'nct-label';
+        return this.required ? 'nct-label is-required' : 'nct-label';
     }
 
     get hasLabel () {

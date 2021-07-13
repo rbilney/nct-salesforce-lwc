@@ -1,44 +1,32 @@
-import { LightningElement, api } from 'lwc';
+import { LightningElement, api, track } from 'lwc';
 
 export default class Select extends LightningElement {
     @api label;
     @api name;
-    @api isRequired = false;
+    @api required = false;
     @api showHelpText = false;
     @api helpText;
     @api isError = false;
     @api errorText;
 
-    options = [
-        { 
-            id: 5,
-            label: '--- Please select ---',
-            value: ''
-        },
-        { 
-            id: 1,
-            label: 'Email',
-            value: 'email'
-        },
-        {  
-            id: 2,
-            label: 'Post',
-            value: 'post',
-        },
-        {  
-            id: 3,
-            label: 'SMS Text',
-            value: 'sms-text'
-        },
-        {  
-            id: 4,
-            label: 'Telephone',
-            value: 'phone'
-        }
-    ];
+    @api options;
+
+    userSelection = [];
 
     get selectClasses() {
-        return this.isRequired ? 'is-required' : '';
+        return this.required ? 'is-required' : '';
+    }
+
+    handleChange(event) {
+        console.log(event.target.value)
+        //this.userSelection = event.target.value;
+        //this.validate();
+        
+        this.dispatchEvent(new CustomEvent('fieldoutput', {
+            detail: event.target.value
+        }));
+        //const attributeChangeEvent = new FlowAttributeChangeEvent('value', event.target.value);
+        //this.dispatchEvent(attributeChangeEvent);          
     }
 
 }

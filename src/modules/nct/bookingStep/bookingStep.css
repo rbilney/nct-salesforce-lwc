@@ -1,0 +1,70 @@
+.nct-booking-step {
+    background-color: var(--nct-dark-green);
+    border-radius: 0.2rem;
+    margin: 1rem;
+}
+
+.nct-booking-step-header-wrapper {
+    padding: 1rem 1rem;
+}
+
+.nct-booking-step-header-wrapper h2 {
+    font-family: var(--secondary-font);
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 1rem;
+    margin: 0;
+    padding: 0;
+}
+
+.nct-booking-step-header-wrapper .nct-booking-step-number::after {
+    content: '.';
+    padding-right: 0.75rem;
+}
+
+
+.nct-booking-step-content-wrapper {
+    background-color: #ffffff;
+    border: 1px solid var(--nct-dark-green);
+    padding: 1rem;
+}
+
+
+.nct-booking-step.step-completed {
+    background-color: var(--nct-green);
+}
+
+.nct-booking-step.step-completed .nct-booking-step-content-wrapper {
+   border-color: var(--nct-green);
+}
+
+.nct-booking-step.step-completed .nct-booking-step-header-wrapper .nct-booking-step-number {
+    display: none;
+}
+    
+.nct-booking-step.step-completed .nct-booking-step-header-wrapper .nct-booking-step-title::before {
+    content: ' ';
+    padding: 0.75rem;
+    margin-right: 0.75rem;
+    background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'><path fill='none' stroke='white' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='M6 10l3 3l6-6'/></svg>");
+    background-position: left center;
+    background-repeat: no-repeat;
+}
+
+
+
+
+.nct-booking-step.step-outstanding .nct-booking-step-content-wrapper {
+    display: none;
+ }
+
+
+
+
+.nct-booking-step.step-warning {
+    background-color: #AA6709;
+}
+
+.nct-booking-step.step-warning .nct-booking-step-content-wrapper {
+   border-color: #AA6709;
+}

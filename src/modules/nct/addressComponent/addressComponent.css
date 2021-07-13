@@ -1,0 +1,10 @@
+a {
+    font-family: var(--secondary-font);
+    color: var(--nct-green);
+    font-size: 1rem;
+}
+
+a:hover {
+    color: var(--nct-dark-green);
+    text-decoration: underline;
+}

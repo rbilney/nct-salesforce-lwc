@@ -1,0 +1,40 @@
+.direct-debit-wrapper {
+    margin: 3rem 2rem;
+}
+
+@media (min-width: 576px ) {
+    .direct-debit-layout {
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .direct-debit-information {
+        width: 48%;
+    }
+    
+    .direct-debit-form {
+        width: 48%;
+    }
+}
+
+
+.field-sort-code {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+
+h3 {
+    font-family: var(--secondary-font);
+    color: var(--nct-dark-green);
+    font-weight: 600;
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+}
+
+p {
+    font-size: 1rem;
+    font-family: var(--primary-font);
+    margin-top: 0;
+}

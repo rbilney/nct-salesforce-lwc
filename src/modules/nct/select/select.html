@@ -1,7 +1,7 @@
 <template>
     <div class={selectClasses}>
         <label for={name}>{label}</label>
-        <select name={name} id={name} required={isRequired}>
+        <select name={name} id={name} required={required} onchange={handleChange}>
             <template for:each={options} for:item="option">
                 <option key={option.id} value={option.value}>{option.label}</option>
             </template>

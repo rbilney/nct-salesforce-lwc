@@ -1,0 +1,11 @@
+section {
+    margin: 4rem 2rem;
+}
+
+section h2 {
+    font-family: var(--secondary-font);
+    font-weight: 200;
+    margin-bottom: 4rem;
+    margin-top: 4rem;
+    border-bottom: 1px solid #e3e3e3;
+}

@@ -4,6 +4,15 @@
     line-height: 1.5;
 }
 
+.checkbox__label.is-required::after {
+    font-family: var(--secondary-font);
+    font-weight: 800;
+    color: var(--nct-orange);
+    content:'*';
+    font-size: 1.4rem;
+    line-height: 1;
+}
+
 .checkbox {
     display: grid;
     grid-template-columns: min-content auto;
@@ -57,3 +66,4 @@ input:checked + .checkbox__control::before {
     margin-top: 4px;
     color: var(--nct-red);
 }
+

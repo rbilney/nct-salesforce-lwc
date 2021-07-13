@@ -10,7 +10,7 @@
     font-weight: 500;
     color: #181818;
     display: block;
-    margin-bottom: 6px;
+    margin-bottom: 0.5rem;
 }
 
 .nct-input.is-required label::after {
@@ -54,6 +54,10 @@
 }
 
 .nct-input .nct-input-error-text {
+    display: none;
+}
+.nct-input.is-error .nct-input-error-text {
+    display: block;
     font-family: var(--secondary-font);
     font-size: 0.8rem;
     margin-top: 4px;

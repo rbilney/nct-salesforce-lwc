@@ -1,0 +1,24 @@
+.course-payment-wrapper, .membership-payment-wrapper {
+    margin: 1rem 0 3rem 0;
+}
+
+.card-instalment-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 2rem 2rem;
+}
+
+@media (min-width: 576px ) {
+    .card-instalment-wrapper {
+        flex-direction: row;
+    }
+    
+    .card-instalment-information {
+        width: 48%;
+    }
+    
+    .card-instalment-options {
+        width: 48%;
+    }
+}

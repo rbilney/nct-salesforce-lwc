@@ -1,0 +1,95 @@
+.membership-products-wrapper {
+    display: flex;
+    align-items: flex-end;
+}
+
+.membership-product-wrapper {
+    display: block;
+    width: 50%;
+    margin: 0 0.3rem;
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+    box-sizing: border-box;         /* Opera/IE 8+ */
+}
+
+.membership-product-wrapper[data-most-popular=true] {
+    background-color: var(--nct-orange);
+    border-radius: 1rem;
+    margin-bottom: 0;
+}
+
+.membership-product-wrapper[data-most-popular=true] .most-popular-flag {
+    color: #ffffff;
+    font-family: var(--secondary-font);
+    font-weight: 600;
+    font-size: 0.8rem;
+    padding: 0.3rem 1rem;
+}
+
+.membership-product-wrapper[data-most-popular=false] .most-popular-flag {
+    display: none;
+}
+
+.membership-product-content {
+    background-color: #ffffff;
+    border-radius: 1rem;
+    padding: 0.5rem 1rem;
+}
+
+.membership-product-wrapper[data-most-popular=true] .membership-product-content {
+    border: 2px solid var(--nct-orange);
+}
+
+.membership-product-wrapper[data-most-popular=false] .membership-product-content {
+    border: 2px solid #C4C4C4;
+}
+
+.membership-product-content h3 {
+    font-family: var(--secondary-font);
+    color: var(--nct-dark-green);
+    font-size: 1.4rem;
+    font-weight: 500;
+    margin: 0.75rem 0 1rem 0;
+}
+
+.membership-product-content .price-summary {
+    font-family: var(--secondary-font);
+    line-height: 1.5;
+} 
+
+.membership-product-content .price-summary .price-highlighted {
+    font-size: 2rem;
+}
+
+
+.radio-button-wrapper input[type="radio"] {
+    position: fixed;
+    opacity: 0;
+    pointer-events: none;
+}
+
+
+.radio-button-wrapper .radio-button {
+    display: flex;
+    align-items: center;
+    background-color: #FAFAFA;
+    padding: 0.5rem 1rem;
+    margin: 5px;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    height: 50px;
+    border: 1px solid #C4C4C4;
+    border-radius: 0.5rem;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    cursor: pointer;
+    justify-content: center;
+}
+
+.radio-button-wrapper label:hover {
+    background-color: #acabab;
+}
+
+.radio-button-wrapper input:checked + label {
+    background-color: var(--nct-green);
+    color: #ffffff;
+}

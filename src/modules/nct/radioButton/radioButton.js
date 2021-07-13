@@ -1,7 +1,7 @@
 import { LightningElement, api } from 'lwc';
 
 export default class RadioButton extends LightningElement {
-    @api isRequired = false;
+    @api required = false;
     @api showHelpText = false;
     @api helpText;
     @api isError = false;

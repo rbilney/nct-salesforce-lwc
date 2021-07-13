@@ -1,0 +1,34 @@
+<template>
+    <div class="membership-lead-in" lwc:dom="manual"></div>
+    <div class="membership-products-wrapper">
+        <template for:each={membershipProducts} for:item="product">
+            <div class="membership-product-wrapper" key={product.id} data-most-popular={product.flagMostPopular}>
+                <div class="most-popular-flag">Most popular</div>
+                <div class="membership-product-content">
+                    <h3>{product.title}</h3>
+                    <p>{product.description}</p>
+                    <p class="price-summary"><span class="price-highlighted">£{product.pricePerQuarter}</span> per quarter<br />
+                    (or £{product.priceAnnually} single payment)</p>
+
+                    <div key={product.id} class="radio-button-wrapper">
+                        <input type="radio" name={product.name} key={product.id} value={product.value} id={product.id} onchange={handleUserSelection} />
+                        <label class="radio-button" key={product.id} for={product.id}>
+                            <div>
+                                Select
+                            </div>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </template>
+    </div>
+
+    <div class="radio-button-wrapper">
+        <input type="radio" name={radioGroupName} value="none" id="no-nct-membership" onchange={handleUserSelection} />
+        <label class="radio-button" for="no-nct-membership">
+            <div>
+                Continue without NCT membership
+            </div>
+        </label>
+    </div>
+</template>

@@ -1,0 +1,10 @@
+<template>
+    <div class={getStepState}>
+        <header class="nct-booking-step-header-wrapper">
+            <h2><span class="nct-booking-step-number">{stepNumber}</span> <span class="nct-booking-step-title">{title}</span></h2>
+        </header>
+        <div class="nct-booking-step-content-wrapper">
+            <slot></slot>
+        </div>
+    </div>
+</template>

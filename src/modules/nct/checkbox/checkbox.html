@@ -1,11 +1,19 @@
 <template>
-    <template for:each={options} for:item="option">
+    <template for:each={checkboxOptions} for:item="option">
         <label key={option.id} class="checkbox">
             <span class="checkbox__input">
-                <input type="checkbox" name={option.name} key={option.id} value={option.value} checked={option.checked} />
+                <input 
+                    type="checkbox" 
+                    name={option.name} 
+                    id={option.id} 
+                    key={option.id} 
+                    value={option.value} 
+                    checked={option.checked} 
+                    required={required}
+                    onchange={handleChange} />
                 <span class="checkbox__control"></span>
             </span>
-            <span class="checkbox__label">{option.label}</span>
+            <span class={getLabelClasses}>{option.label}</span>
         </label>
     </template>
     <template if:true={isError}>

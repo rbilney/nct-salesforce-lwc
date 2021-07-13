@@ -1,0 +1,27 @@
+<template>
+    <template if:true={isLoading}>
+        <h2>LOADING...</h2>
+    </template>
+    <template if:false={isLoading}>
+        <template if:true={searchResultsForm}>
+            <nct-select label="Select your address" options={formattedAddresses} name="address-select" onfieldoutput={handleAddressSelection}></nct-select>
+            <p>
+                <a href="#" onclick={handleLinkClick} data-action="search">Look up a different postcode</a>
+            </p>
+            <p>
+                <a href="#" onclick={handleLinkClick} data-action="manual">Enter address manually</a>
+            </p>
+        </template>
+        <template if:true={newSearchForm}>
+            <nct-text-input label="Postcode" field-name="postcode" input-type="text" custom-error-text="Postcode is required" required onfieldoutput={handlePostcodeInput}></nct-text-input>
+            <nct-button type="submit" button-text="Find address" onclick={handleLookupButtonClick}></nct-button>
+        </template>
+        <template if:true={manualEntryForm}>
+            <nct-text-input label="Street" field-name="street" input-type="text" custom-error-text="Please provide a street name" required></nct-text-input>
+            <nct-text-input label="Town" field-name="town" input-type="text" custom-error-text="You must provide a town" required></nct-text-input>
+            <nct-text-input label="Postcode" value={postcode} field-name="postcode" input-type="text" custom-error-text="Postcode is required" required></nct-text-input>
+            <nct-text-input label="County" field-name="county" input-type="text"></nct-text-input>
+            <nct-select label="Country" options={countryList} name="country-select"></nct-select>
+        </template>
+    </template>
+</template>

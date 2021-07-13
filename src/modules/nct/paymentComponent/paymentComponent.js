@@ -97,4 +97,6 @@ export default class PaymentComponent extends LightningElement {
     get showDirectDebit() {
         return (this.membershipSelection === 'membership-direct-debit') ? true : false;
     }
+
+
 }

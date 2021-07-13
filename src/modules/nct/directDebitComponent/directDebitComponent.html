@@ -1,0 +1,68 @@
+<template>
+    <div class="direct-debit-wrapper">
+        <h3>Set up your direct debit </h3>
+
+        <div class="direct-debit-layout">
+            <div class="direct-debit-information">
+                <p>
+                    We’ll collect your direct debit of £9.50 on the 3rd of the month.
+                </p>
+
+                <p>
+                    If you are not the account holder or the bank account requires more than one signatory, please ask our Enquiries team to send you a paper Direct Debit Instruction.
+                </p>
+
+                <p>
+                    <a href="#">View the direct debit guarantee</a>
+                </p>
+            </div>
+
+            <div class="direct-debit-form">
+                <nct-text-input 
+                    label="Account number" 
+                    field-name="accountnumber"
+                    input-type="number" 
+                    value=""
+                    onhandlefieldchange={handleDirectDebit}
+                    required
+                    ></nct-text-input>
+
+                <div class="field-sort-code">
+                    <nct-text-input 
+                    label="Sort code" 
+                    field-name="sort1"
+                    input-type="number" 
+                    value=""
+                    onhandlefieldchange={handleDirectDebit}
+                    required
+                    ></nct-text-input>
+
+                    <nct-text-input 
+                    field-name="sort2"
+                    input-type="number" 
+                    onhandlefieldchange={handleDirectDebit}
+                    value=""
+                    ></nct-text-input>
+                    
+                    <nct-text-input 
+                    field-name="sort3"
+                    onhandlefieldchange={handleDirectDebit}
+                    input-type="number" 
+                    value=""
+                    ></nct-text-input>
+                </div>
+
+                <nct-text-input 
+                    label="Account name" 
+                    field-name="accountname"
+                    input-type="text" 
+                    onhandlefieldchange={handleDirectDebit}
+                    value=""
+                    required
+                    ></nct-text-input>
+
+                <nct-checkbox checkbox-options={directDebitAuthorisation} required="true"></nct-checkbox>
+            </div>
+        </div>
+    </div>
+</template>

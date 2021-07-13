@@ -1,0 +1,11 @@
+<template>
+    <form>
+        <nct-text-input label="First name" field-name="firstName" input-type="text" custom-error-text="You must provide a name" required></nct-text-input>
+        <nct-text-input label="Last name" field-name="lastName" input-type="text" custom-error-text="You must provide a name" required></nct-text-input>
+        <nct-text-input label="Email" field-name="email" input-type="email" custom-error-text="Please include a valid email address" required></nct-text-input>
+        <nct-text-input label="Phone" field-name="phone" input-type="tel" custom-error-text="You must provide a phone number" required></nct-text-input>
+        <nct-text-input label="Baby's due date/birth date" field-name="dueDate" input-type="date" custom-error-text="Please provide your baby's due date/birth date" required></nct-text-input>
+
+        <nct-button type="submit" button-text="Save" onclick={submitForm}></nct-button>
+    </form>
+</template>
